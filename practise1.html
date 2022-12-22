@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+<title>Addition of Two Numbers exercise</title>
+<script type="text/javascript">
+function add()
+{
+	var a = parseInt(document.getElementById("n1").value);
+	var b = parseInt(document.getElementById("n2").value);
+	alert("a="+a+"b="+b);
+	document.getElementById("add").innerHTML=a+b;
+	document.getElementById("sub").innerHTML=a-b;
+	document.getElementById("mul").innerHTML=a*b;
+	document.getElementById("div").innerHTML=a/b;
+	document.getElementById("rem").innerHTML=a%b;
+}
+</script>
+</head>
+<body><h1>ARTHIMETIC CALCULATION</h1>
+a <input type="number" id="n1" value="" required></br>
+b <input type="number" id="n2" value="" required></br>
+ADDITION of Numbers :<div id="add"></div><br/>
+SUBTRACTION of Numbers :<div id="sub"></div><br/>
+MULTIPLICATION of Numbers :<div id="mul"></div><br/>
+DIVISION of Numbers :<div id="div"></div><br/>
+REMAINDER of Numbers :<div id="rem"></div><br/>
+<button onclick="add()" id="btn1">ARTHIMETIC OPERATION</button><br/>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<head><title>jQuery Action and Selectors</title>
+<style>
+*{
+font-size: 20px;
+color: blue;
+background-color: rgb(0,f,0);
+font-family: arial bold;
+text-align:center;
+}
+#p1{
+border:2px;
+border-style:solid;
+border-color:red;
+}
+#p2{
+border:4px 2px;
+border-style:dashed;
+border-color:green;
+}
+#p3{
+border:5px;
+border-style:double;
+border-color:blue;
+}
+#p4{
+border:6px;
+border-style:groove;
+border-color:aqua;
+}
+#block{
+padding:20px;
+width:20px;
+height:30px;
+border: 2px solid red;
+position: absolute;
+float:left;
+border-width: 10px;
+border-height: 40px;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js">
+</script>
+<script>
+$(document).ready(function(){
+$("button").click(function() 
+{
+$("#head1").fadeOut(10000);
+$("#head1").fadeIn(15000);
+});
+
+$("#p1").hover(function(){
+$(this).css(backgroung-color","#ddccbb");
+},  function(){
+$(this).css("background-color","pink");
+});
+$("#para4").click(function(){
+$("#block").animate({left: '500px'});
+});
+$("#div2").click(function()
+{$("li").fadeout(2000)
+});
+$("#div3").click(function(){
+});
+$("#switch").toggle();
+});
+$("#p2").hover(function(){
+$("#p2").append("Basic html,css,java");
+});
+$("#foc").click(function(){
+$("#mesg").focus().css("background-color","cyan").append("good evening");
+});
+});
+</script>
+
+</head>
+<body>
+<h1 id="head1"> My Dynamic Profile Page </h1>
+<p id="p1">About Myself:<div id="div1"> I am so and so, ...... write about yourself atleast 10 lines</div></p>
+<p id="p2"> About Courses / Technologies Learnt in previous years </p>
+<p id="p3"> Talk about your dream company </p>
+<p id="p4"> Select The domain you are interested:</p>
+<div id="block"></div>
+
+
+<div id="div2"> Achievements <ol><li> Sports - 100 Mtrs Runner Up</li>
+<li> Bike Race - Champion</li>
+<li> Swimmer - Silver Medal</li>
+<li> Trekking - Gold Medal</li>
+</ol>
+
+<div id="div3"> Humanity <ul><li> Kind Soul </li>
+<li> Helping Nature </li>
+<li> Charlie 777 </li></ul>
+</div>
+<div id="switch"> on and off Same button</div>
+<div id="msg"><input type="text" value="" id="mesg"></div>
+<button id="heading"> Click Me to Hide Heading Text </button> 
+<button id="para4">Animate</button>
+<button id="tg">Toggle</button>
+<button id="foc">Focus</button>
+</body>
+</html>

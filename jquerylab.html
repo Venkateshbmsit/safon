@@ -1,0 +1,74 @@
+<!doctype html>
+<head>
+<title>JQuery Lab Programs</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+$("#btn1").click(function() {
+$("h1").hide();
+$("h1").show(10000).css("color","#00ff00");
+});
+$("#ul1").hover(function()
+{
+$(this).css("background-color","yellow");
+},function()
+{
+$(this).css("background-color","pink");
+});
+$("#btn2").click(function() {
+$("div").animate({left:'750px'});
+});
+$("#btn3").click(function() {
+$('.bulb').toggle();
+});
+$("#btn4").click(function() {                                                                                                                                                                                                                                                                                                              
+$('input').focus(function() {
+$('#name').css("background-color","#0000ff").fadeOut(2000);
+});
+});
+});
+</script>
+<style>
+*{
+font-size: 20px;
+color: #0000ff;
+}
+#block
+{
+width: 20%;
+height: 20%;
+float: left;
+background-color: #0f0f0f;
+position:absolute;
+border: 2px solid #ff0000;
+border-style: arc;
+border-width: 10px;
+border-height: 40px;
+}
+</style>
+</head>
+<body>
+<h1>My Dynamic Profile Page</h1>
+<p id="p1">About Me</p>
+<p id="p2">About My Dream Company</p>
+<p id="p3">About Achievements</p>
+<ul id="ul1">Humanity Service
+<li>Kind Nature</li>
+<li>Helping Hand</li>
+<li>Pet Care</li>
+</ul>
+<ol id="ol1">Priority of Job
+<li>Software Engineer</li>
+<li>Human Resource Management</li>
+<li>Mary</li>
+</ol>
+<div class="bulb">Switch<div id="on_off"></div></div>
+
+<button id="btn1">Hide Heading</button>
+<button id="btn2">Animate Image</button>
+<button id="btn3">Toggle (Off/On)</button>
+<button id="btn4">Focus of Text or Textbox</button>
+<div id="block"></div><br>
+Enter Your Message:<input type="text" id="name" value="">
+</body>
+</html>
